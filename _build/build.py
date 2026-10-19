@@ -8,6 +8,10 @@ import os, sys, urllib.parse
 # Leave empty to build without domain-specific files and tags.
 SITE_URL = ""
 
+# GoatCounter analytics: your site code, e.g. "jordanangelov" for jordanangelov.goatcounter.com.
+# Leave empty to build without analytics.
+GOATCOUNTER_CODE = ""
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 src = open(os.path.join(ROOT, "_build", "source.html"), encoding="utf-8").read()
 
@@ -136,6 +140,13 @@ def seo_tags(lang):
         f'  <meta property="og:locale" content="{"el_GR" if lang == "el" else "en_GB"}" />\n'
         f'  <meta name="twitter:card" content="summary" />\n'
     )
+
+if GOATCOUNTER_CODE:
+    gc = (f'  <script data-goatcounter="https://{GOATCOUNTER_CODE}.goatcounter.com/count"\n'
+          '          async src="//gc.zgo.at/count.js"></script>\n</body>')
+    el = el.replace("</body>", gc, 1)
+    en = en.replace("</body>", gc, 1)
+    print("GoatCounter enabled:", GOATCOUNTER_CODE)
 
 TITLE_END = "</title>\n"
 el = el.replace(TITLE_END, TITLE_END + seo_tags("el"), 1)

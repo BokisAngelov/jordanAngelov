@@ -50,6 +50,18 @@ language links (`en/` and `../`) need it.
 Note: GitHub Pages on a **private** repository needs a paid GitHub plan (Pro, Team or Enterprise).
 On a free plan the repository must be made public before Pages can be enabled.
 
+## Analytics (GoatCounter)
+
+1. Create a free account at https://www.goatcounter.com/signup and choose a site code
+   (e.g. `jordanangelov` gives `jordanangelov.goatcounter.com`).
+2. Set `GOATCOUNTER_CODE` at the top of `_build/build.py` to that code, rebuild, commit and push.
+3. In GoatCounter settings, add the live domain under allowed/site domains if prompted.
+
+Page views are counted per page, so Greek (`/`) and English (`/en/`) show separately.
+Clicks on these buttons are also counted as events:
+`hero-book-consultation`, `contact-call`, `contact-whatsapp`, `contact-email`.
+GoatCounter uses no cookies and does not count visits from localhost.
+
 ## Before launch
 
 - Add licence/registration details and any required regulatory disclosures to the footer
