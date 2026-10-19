@@ -1,0 +1,12 @@
+# Local drafts and original source files (not part of the website)
+option-a-dark.html
+option-b-light.html
+insurance-advisor-cyprus_template.html
+JA_profile.jpeg
+jordanAngelov_logo.jpeg
+services-greek.txt
+assets/logo-original.jpeg
+
+__pycache__/
+.DS_Store
+Thumbs.db

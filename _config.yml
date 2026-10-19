@@ -1,0 +1,3 @@
+# GitHub Pages settings. Folders starting with "_" (like _build) are never published.
+exclude:
+  - README.md
