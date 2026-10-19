@@ -6,11 +6,11 @@ import os, sys, urllib.parse
 
 # Set this once the domain is ready, e.g. "https://www.jordanangelov.com" (no trailing slash).
 # Leave empty to build without domain-specific files and tags.
-SITE_URL = ""
+SITE_URL = "https://jordanangelov.com"
 
 # GoatCounter analytics: your site code, e.g. "jordanangelov" for jordanangelov.goatcounter.com.
 # Leave empty to build without analytics.
-GOATCOUNTER_CODE = ""
+GOATCOUNTER_CODE = "jordana96"
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 src = open(os.path.join(ROOT, "_build", "source.html"), encoding="utf-8").read()
